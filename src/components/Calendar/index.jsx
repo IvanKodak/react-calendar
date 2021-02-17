@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import CurrentDay from "./CurrentDay";
+import CalendarBody from "./CalendarBody";
 
 class Calendar extends Component {
   constructor(props) {
@@ -11,7 +13,12 @@ class Calendar extends Component {
 
   render() {
     const { currentDay } = this.state;
-    return <div>{currentDay.toString()}</div>;
+    return (
+      <section>
+        <CurrentDay />
+        <CalendarBody />
+      </section>
+    );
   }
 }
 
